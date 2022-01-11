@@ -4,14 +4,27 @@
 
 package frc.robot.subsystems.gyro;
 
+import com.kauailabs.navx.frc.AHRS;
+
+import edu.wpi.first.wpilibj.SerialPort;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class GyroSubsystem extends SubsystemBase {
+
+  private AHRS gyro;
   /** Creates a new ExampleSubsystem. */
-  public GyroSubsystem() {}
+  public GyroSubsystem() {
+    this.gyro = new AHRS(SerialPort.Port.kUSB);
+  }
+
+  public double getGyroAngle() {
+    return this.gyro.getAngle();
+  }
 
   @Override
   public void periodic() {
+    SmartDashboard.putNumber("gyro", this.getGyroAngle());
     // This method will be called once per scheduler run
   }
 

@@ -25,7 +25,12 @@ public final class Constants {
         // motorX(x)...
         
         elevatorTalon1(50),
-        elevatorTalon2(51);
+        elevatorTalon2(51),
+        leftFalcon1(5),
+        rightFalcon1(2),
+        leftFalcon2(4),
+        rightFalcon2(3),
+        ;
         
         public final int id;
 
