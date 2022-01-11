@@ -53,19 +53,19 @@ public class RobotContainer {
   //  new JoystickButton(joystick, PaddedXbox.F310Map.kGamepadButtonA.value).whenPressed(new ElevatorUp(elevator, joystick, .1));
 
   }
-  public Command getDefaultCommand(){
-    return turnToAngle;
-    // return elevatorUp;
-  }
+  // public Command getDefaultCommand(){
+  //   return turnToAngle;
+  //   // return elevatorUp;
+  // }
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
 //    *
 //    * @return the command to run in autonomous
 //    */
-//   public Command getAutonomousCommand() {
-//     // An ExampleCommand will run in autonomous
-//     return m_autoCommand;
-//   }
+  public Command getAutonomousCommand() {
+    // An ExampleCommand will run in autonomous
+    return turnToAngle;
+  }
   public void scheduleDefaultCommands(){
     // elevatorUp.schedule();
     // calibrate.schedule();
