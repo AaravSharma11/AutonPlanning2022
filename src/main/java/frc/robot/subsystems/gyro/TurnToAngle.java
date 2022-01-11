@@ -22,6 +22,9 @@ public class TurnToAngle extends CommandBase {
     this.gyroSub = gyroSub;
     this.power = power;
     this.angle = angle;
+
+    addRequirements(driveBaseSub);
+    addRequirements(gyroSub);
   }
 
   // Called when the command is initially scheduled.
