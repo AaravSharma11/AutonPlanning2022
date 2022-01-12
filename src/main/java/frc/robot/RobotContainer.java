@@ -18,15 +18,13 @@ import frc.robot.subsystems.gyro.TurnToAngle;
  * subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
-  // The rob\ot's subsystems and commands are defined here...
+  // The robot's subsystems and commands are defined here...
   // private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  // private final ElevatorSubsystem elevator = new ElevatorSubsystem();
   // private final PaddedXbox joystick = new PaddedXbox();
-
-  // private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
-  // private final ElevatorUp elevatorUp = new  ElevatorUp(elevator, joystick, 0);
   private final DriveBaseSub driveBaseSub = new DriveBaseSub();
   private final GyroSubsystem gyroSub = new GyroSubsystem();
+
+  // private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
   private final TurnToAngle turnToAngle = new TurnToAngle(driveBaseSub, gyroSub, 30, 0.5);
   
 
@@ -43,25 +41,20 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-  //  new JoystickButton(joystick, PaddedXbox.F310Map.kGamepadButtonA.value).whenPressed(new ElevatorUp(elevator, joystick, .1));
 
   }
-  // public Command getDefaultCommand(){
-  //   return turnToAngle;
-  //   // return elevatorUp;
-  // }
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
 //    *
 //    * @return the command to run in autonomous
 //    */
+
   public Command getAutonomousCommand() {
-    // An ExampleCommand will run in autonomous
     return turnToAngle;
   }
+
+  // schedule default commands here
   public void scheduleDefaultCommands(){
-    // elevatorUp.schedule();
-    // calibrate.schedule();
-    // intakeDefault.schedule();
+    
   }
 }
