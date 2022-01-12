@@ -55,6 +55,6 @@ public class TurnToAngle extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return gyroSub.getGyroAngle() >= this.angle + this.startAngle;
+    return gyroSub.getGyroAngle() >= this.angle - this.startAngle;
   }
 }
